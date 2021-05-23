@@ -83,6 +83,13 @@ class EmployeeData extends React.Component {
             employeeDetails:filterrecords
         })
     }
+getEmployeelist= (event) => {
+    event.preventDefault()
+    let empData = this.state.empDataBase
+    this.setState ({ employeeDetails: empData})
+
+}
+
 
 
     render() {
@@ -102,6 +109,11 @@ class EmployeeData extends React.Component {
                 <div className="col-12">
                     <button type="submit" onClick={this.grabfirstname} className="btn btn-primary">Search employee by first name</button>
                 </div>
+
+                <div className="col-12">
+                    <button type="reset" onClick={this.getEmployeelist} className="btn btn-primary">Reset</button>
+                </div>
+
             </form>
             <table className="container-fluid table table-striped">
                 <thead>
