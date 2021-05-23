@@ -61,19 +61,25 @@ class EmployeeData extends React.Component {
         }
 
     }
-    getfirstname = (event)=>{
-    let ele = event.target.value;
-    this.setState({searchString:ele})
-    console.log(ele)
+    getfirstname = (event) => {
+        let ele = event.target.value;
+        this.setState({ searchString: ele }, () =>
+            console.log(ele))
     }
 
-    grabfirstname = (event)=>{
-        let ele = event.target.value;
-        this.setState({searchString:ele})
-        console.log(ele)
+    grabfirstname = (event) => {
+        event.preventDefault()
+        let emprecords = this.state.employeeDetails;
+        let filterrecords = []
+    for (let i = 0; i < emprecords.length; i++) {
+            if (emprecords[i].firstname.toLocaleLowerCase().indexOf(this.state.searchString.toLocaleLowerCase()) > -1) {
+                filterrecords.push(emprecords[i])
+            }
         }
+        console.log(filterrecords)
+    }
 
-        
+
     render() {
         return (<main className="container">
             <h1> IT Department</h1>
@@ -85,37 +91,37 @@ class EmployeeData extends React.Component {
                 ))} */}
             <form>
                 <div className="col-md-2">
-                    <label for="inputfirstname" className="form-label">Enter employee's first name</label>
-                    <input type="text" onclick={this.getfirstname} className="form-control" id="inputfirstname"/>
+                    <label className="form-label">Enter employee's first name</label>
+                    <input type="text" value={this.state.searchString} onChange={this.getfirstname} className="form-control" />
                 </div>
-               <div className="col-12">
-                            <button type="submit" onclick={this.grabfirstname} className="btn btn-primary">Search employee by first name</button>
-               </div>
+                <div className="col-12">
+                    <button type="submit" onClick={this.grabfirstname} className="btn btn-primary">Search employee by first name</button>
+                </div>
             </form>
-                    <table className="container-fluid table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Bio pic</th>
-                                <th>First Name</th>
-                                <th><button className="btn btn-primary" onClick={this.sortLastName}>Last Name</button></th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.employeeDetails.map((item, key) => {
-                                return (<tr key={key}>
-                                    <td><img src={item.img} /></td>
-                                    <td>{item.firstname}</td>
-                                    <td> {item.lastname}</td>
-                                    <td> {item.email}</td>
+            <table className="container-fluid table table-striped">
+                <thead>
+                    <tr>
+                        <th>Bio pic</th>
+                        <th>First Name</th>
+                        <th><button className="btn btn-primary" onClick={this.sortLastName}>Last Name</button></th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.employeeDetails.map((item, key) => {
+                        return (<tr key={key}>
+                            <td><img src={item.img} /></td>
+                            <td>{item.firstname}</td>
+                            <td> {item.lastname}</td>
+                            <td> {item.email}</td>
 
-                                </tr>)
-                            })}
-                        </tbody>
-                    </table>
-            </main>
-            )
-        }
+                        </tr>)
+                    })}
+                </tbody>
+            </table>
+        </main>
+        )
+    }
 
 }
 
