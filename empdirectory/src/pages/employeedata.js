@@ -4,6 +4,7 @@ import axios from "axios";
 class EmployeeData extends React.Component {
     state = {
         employeeDetails: [],
+        empDataBase:[],
         sortOrder: "asc",
         searchString: ""
     }
@@ -24,7 +25,8 @@ class EmployeeData extends React.Component {
                     })
                 }
                 this.setState({
-                    employeeDetails: empData
+                    employeeDetails: empData,
+                    empDataBase : empData
                 })
             })
 
@@ -77,6 +79,9 @@ class EmployeeData extends React.Component {
             }
         }
         console.log(filterrecords)
+        this.setState({
+            employeeDetails:filterrecords
+        })
     }
 
 
