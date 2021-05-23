@@ -4,7 +4,8 @@ import axios from "axios";
 class EmployeeData extends React.Component {
     state = {
         employeeDetails: [],
-        sortOrder: "asc"
+        sortOrder: "asc",
+        searchString: ""
     }
 
     componentDidMount = () => {
@@ -60,6 +61,19 @@ class EmployeeData extends React.Component {
         }
 
     }
+    getfirstname = (event)=>{
+    let ele = event.target.value;
+    this.setState({searchString:ele})
+    console.log(ele)
+    }
+
+    grabfirstname = (event)=>{
+        let ele = event.target.value;
+        this.setState({searchString:ele})
+        console.log(ele)
+        }
+
+        
     render() {
         return (<main className="container">
             <h1> IT Department</h1>
@@ -72,10 +86,10 @@ class EmployeeData extends React.Component {
             <form>
                 <div className="col-md-2">
                     <label for="inputfirstname" className="form-label">Enter employee's first name</label>
-                    <input type="text" className="form-control" id="inputfirstname"/>
+                    <input type="text" onclick={this.getfirstname} className="form-control" id="inputfirstname"/>
                 </div>
                <div className="col-12">
-                            <button type="submit" className="btn btn-primary">Search employee by first name</button>
+                            <button type="submit" onclick={this.grabfirstname} className="btn btn-primary">Search employee by first name</button>
                </div>
             </form>
                     <table className="container-fluid table table-striped">
