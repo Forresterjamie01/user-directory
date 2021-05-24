@@ -11,7 +11,7 @@ For this assignment, I created a employee directory with React. In this applicat
 ## Summary (What It Does)
 ![ScreenShot of Application](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20Readme%20-Employee%20Directory.gif)
 
-An employee or manager can view non-sensitive data (Name, Email and Phone Number) about other employees. They are also able to filter employees by first name.
+An employee or manager can view non-sensitive data (Name, Email, Phone Number Nationality, and Gender ) about other employees. They are also able to filter employees by first name.
 
 ## Code Snippets
 ![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20of%20API%20Code%20for%20Employee%20Directory.gif)

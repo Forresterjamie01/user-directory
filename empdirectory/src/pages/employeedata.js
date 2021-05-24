@@ -22,9 +22,8 @@ class EmployeeData extends React.Component {
                         email: apiData[i].email,
                         img: apiData[i].picture.medium,
                         phone: apiData[i].phone,
-                        state: apiData[i].state,
-
-
+                        nat: apiData[i].nat,
+                        gender: apiData[i].gender
 
 
                     })
@@ -128,7 +127,9 @@ getEmployeelist= (event) => {
                         <th><button className="btn btn-primary" onClick={this.sortLastName}>Last Name</button></th>
                         <th>Email</th>
                         <th>Phone Number</th>
-                        <th>Address</th>
+                        <th>Nationality</th>
+                        <th>Gender</th>
+
 
                     </tr>
                 </thead>
@@ -140,7 +141,8 @@ getEmployeelist= (event) => {
                             <td> {item.lastname}</td>
                             <td> {item.email}</td>
                             <td> {item.phone}</td>
-                            <td> {item.state}</td>
+                            <td> {item.nat}</td>
+                            <td> {item.gender}</td>
 
 
 
