@@ -39,8 +39,8 @@ An employee or manager can view non-sensitive data (Name, Email and Phone Number
 ## Author Link
 [Jamie Forrester's GitHub](https://github.com/Forresterjamie01/user-directory)
 
-[![Javascript badge](https://img.shields.io/badge/Javascript-71.9%-yellow)](https://shields.io/)
-[![HTML badge](https://img.shields.io/badge/HTML-19.0%-red)](https://shields.io/)
-[![CSS badge](https://img.shields.io/badge/CSS-9.1%-purple)](https://shields.io/)
+[![Javascript badge](https://img.shields.io/badge/Javascript-71.9%25-yellow)](https://shields.io/)
+[![HTML badge](https://img.shields.io/badge/HTML-19.0%25-red)](https://shields.io/)
+[![CSS badge](https://img.shields.io/badge/CSS-9.1%25-purple)](https://shields.io/)
 
 
