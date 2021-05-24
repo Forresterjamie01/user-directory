@@ -10,7 +10,7 @@ class EmployeeData extends React.Component {
     }
 
     componentDidMount = () => {
-        axios.get("https://randomuser.me/api/?results=20&nat=us")
+        axios.get("https://randomuser.me/api/?results=200&nat=us")
             .then(records => {
                 console.log("Records", records)
                 let empData = []
@@ -20,7 +20,12 @@ class EmployeeData extends React.Component {
                         firstname: apiData[i].name.first,
                         lastname: apiData[i].name.last,
                         email: apiData[i].email,
-                        img: apiData[i].picture.medium
+                        img: apiData[i].picture.medium,
+                        phone: apiData[i].phone,
+                        state: apiData[i].state,
+
+
+
 
                     })
                 }
@@ -122,15 +127,22 @@ getEmployeelist= (event) => {
                         <th>First Name</th>
                         <th><button className="btn btn-primary" onClick={this.sortLastName}>Last Name</button></th>
                         <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {this.state.employeeDetails.map((item, key) => {
                         return (<tr key={key}>
-                            <td><img src={item.img} /></td>
+                            <td><img src={item.img} alt="bio pics" /></td>
                             <td>{item.firstname}</td>
                             <td> {item.lastname}</td>
                             <td> {item.email}</td>
+                            <td> {item.phone}</td>
+                            <td> {item.state}</td>
+
+
 
                         </tr>)
                     })}
