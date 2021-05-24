@@ -22,7 +22,7 @@ An employee or manager can view non-sensitive data (Name, Email and Phone Number
 
 * I wrote a function for the user to be able to sort employee last names alpahbetically. 
 
-![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20sorting%20last%20name%20for%20Employee%20Directory.gif)
+![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20filtering%20names%20for%20Employee%20Directory.gif)
 
 * I wrote a function for the user to be able to search for an employee by first name.
 
