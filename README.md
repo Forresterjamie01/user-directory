@@ -2,20 +2,30 @@
 
 ## Overview
 
-For this assignment, I created a employee directory with React. In this application I  broke up the application's UI into components, manage component state, and respond to user events using React Hooks.
+For this assignment, I created a employee directory with React. In this application I  broke up the application's UI into components, manage component state, and made the app respond to user events using React Hooks.
 
 ## User Story
 
 * As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
 ## Summary (What It Does)
-![ScreenShot of Code]()
+![ScreenShot of Application](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20Readme%20-Employee%20Directory.gif)
 
 An employee or manager can view non-sensitive data (Name, Email and Phone Number) about other employees. They are also able to filter employees by first name.
 
-## Technologies Used
+## Code Snippet
+![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20Readme%20-Employee%20Directory.gif)
 
-Given a table of random users, when the user loads the page, a table of employees should render. 
+* I created a table of random users using the randomusers.me api
+
+![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20Readme%20-Employee%20Directory.gif)
+
+* I wrote a function for the user to be able to sort employee last names alpahbetically. 
+
+![ScreenShot of code](https://github.com/Forresterjamie01/user-directory/blob/master/empdirectory/image/Gif%20for%20Readme%20-Employee%20Directory.gif)
+
+* I wrote a function for the user to be able to search for an employee by first name.
+
 
 The user should be able to:
 
@@ -33,6 +43,6 @@ The user should be able to:
 * **GitHub** - Hosts repository that can be deployed to GitHub Pages.
 
 ## Author Link
-[GitHub](https://github.com/Forresterjamie01/user-directory)
+[Jamie Forrester's GitHub](https://github.com/Forresterjamie01/user-directory)
 
 
